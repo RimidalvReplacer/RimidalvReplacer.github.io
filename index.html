@@ -11,7 +11,7 @@
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --accent-color: #38bdf8;
-            --accent-success: #34d399;
+            --border-color: #334155;
         }
 
         * {
@@ -29,139 +29,137 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 60px;
+        /* Блок О себе */
+        .profile-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
-        header h1 {
+        .profile-section h1 {
             font-size: 2.5rem;
             color: var(--text-main);
             margin-bottom: 10px;
         }
 
-        header p {
+        .profile-section .status {
             font-size: 1.2rem;
             color: var(--accent-color);
-            font-weight: 500;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
-        .subtitle {
-            text-align: center;
-            color: var(--text-muted);
-            margin-top: -45px;
-            margin-bottom: 50px;
-            font-size: 1rem;
+        .profile-section .bio {
+            font-size: 1.05rem;
+            color: #cbd5e1;
+            max-width: 800px;
         }
 
+        /* Заголовки секций */
         h2 {
             font-size: 1.8rem;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             border-left: 4px solid var(--accent-color);
             padding-left: 15px;
             color: var(--text-main);
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-            margin-bottom: 50px;
-        }
-
-        @media (min-width: 768px) {
-            .grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .full-width {
-                grid-column: span 2;
-            }
-        }
-
-        .card {
+        /* Табличный список достижений */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
             background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: 1px solid #334155;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.1);
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            min-width: 600px;
+        }
+
+        th {
+            background-color: #111827;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        td {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #243249;
+        }
+
+        /* Стили для миниатюр */
+        .doc-preview {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid #475569;
+            background-color: #0f172a;
+            display: block;
+            transition: transform 0.2s;
+        }
+
+        .doc-link:hover .doc-preview {
+            transform: scale(1.05);
             border-color: var(--accent-color);
         }
 
-        .card-header {
-            margin-bottom: 15px;
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 4px 10px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            border-radius: 20px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .tag-tech { background-color: rgba(56, 189, 248, 0.15); color: var(--accent-color); }
-        .tag-edu { background-color: rgba(52, 211, 153, 0.15); color: var(--accent-success); }
-        .tag-lang { background-color: rgba(167, 139, 250, 0.15); color: #a78bfa; }
-
-        .card h3 {
-            font-size: 1.3rem;
+        /* Мягкие ссылки */
+        .table-link {
             color: var(--text-main);
-            margin-bottom: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .table-link:hover {
+            color: var(--accent-color);
         }
 
         .issuer {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 12px;
-            font-style: italic;
-        }
-
-        .details {
-            font-size: 0.95rem;
-            color: #cbd5e1;
-            margin-bottom: 15px;
-        }
-
-        .date {
             font-size: 0.85rem;
             color: var(--text-muted);
-            font-weight: bold;
+            margin-top: 4px;
         }
 
-        .btn-link {
-            display: inline-block;
-            margin-top: 15px;
-            color: var(--accent-color);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
+        .year {
+            font-weight: 600;
+            color: var(--text-muted);
         }
 
-        .btn-link:hover {
-            text-decoration: underline;
-        }
-
+        /* Подвал */
         footer {
             text-align: center;
             margin-top: 60px;
             padding-top: 30px;
-            border-top: 1px solid #334155;
+            border-top: 1px solid var(--border-color);
             color: var(--text-muted);
             font-size: 0.9rem;
         }
@@ -180,28 +178,122 @@
 <body>
 
     <div class="container">
-        <header>
+        
+        <!-- Блок "О себе" -->
+        <section class="profile-section">
             <h1>Владимир Чуб</h1>
-            <p>Data & SQL Specialist | Portfolio</p>
-        </header>
+            <div class="status">Студент 4 курса ГБОУПО «СТЭТ»</div>
+            <div class="bio">
+                <p>Обучаюсь на направлении <strong>Информационных технологий и программирования</strong>. Специализируюсь на проектировании и работе с базами данных (SQL), аналитике данных и разработке ПО. Активно развиваю профессиональные навыки, участвую в профильных курсах, олимпиадах и тестированиях для непрерывного повышения квалификации.</p>
+            </div>
+        </section>
 
-        <div class="subtitle">
-            <p>Специализируюсь на работе с базами данных, анализе данных и непрерывном обучении.</p>
-        </div>
-
+        <!-- Блок достижений таблицей -->
         <section>
-            <h2>Достижения и Сертификаты</h2>
-            <div class="grid">
+            <h2>Сертификаты и Достижения</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 120px;">Документ</th>
+                            <th>Название и Описание</th>
+                            <th>Организация</th>
+                            <th style="width: 100px; text-align: center;">Год</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <!-- Stepik SQL -->
+                        <tr>
+                            <td>
+                                <a href="stepik-certificate-Chub-Vladimir.pdf" target="_blank" class="doc-link">
+                                    <img src="stepik-certificate-Chub-Vladimir.pdf" alt="Тренажер по SQL" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%231e293b\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-size=\'10\' font-family=\'sans-serif\'>PDF</text></svg>';">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="stepik-certificate-Chub-Vladimir.pdf" target="_blank" class="table-link">Сертификат с отличием: Интерактивный тренажер по SQL ↗</a>
+                                <div class="issuer">Успешно завершен профильный практический курс по продвинутому написанию SQL-запросов.</div>
+                            </td>
+                            <td>Stepik / ДВФУ</td>
+                            <td style="text-align: center;"><span class="year">2024</span></td>
+                        </tr>
 
-                <div class="card full-width">
-                    <div>
-                        <div class="tag tag-tech">БАЗЫ ДАННЫХ & SQL</div>
-                        <h3>Сертификат с отличием: Интерактивный тренажер по SQL</h3>
-                        <div class="issuer">Дальневосточный федеральный университет (ДВФУ) & Stepik</div>
-                        <p class="details">Успешно освоил продвинутые навыки проектирования и написания сложных запросов к базам данных на практике, завершив профильный интерактивный курс с отличием.</p>
-                    </div>
-                    <div>
-                        <span class="date">Апрель 2024</span>
-                        <br><a href="https://stepik.org/cert/2443687" target="_blank" class="btn-link">Проверить сертификат →</a>
-                    </div>
-                </div>
+                        <!-- SQL Island -->
+                        <tr>
+                            <td>
+                                <a href="Certificate_SQL-Island.pdf" target="_blank" class="doc-link">
+                                    <img src="Certificate_SQL-Island.pdf" alt="SQL Island" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%231e293b\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-size=\'10\' font-family=\'sans-serif\'>PDF</text></svg>';">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="Certificate_SQL-Island.pdf" target="_blank" class="table-link">Сертификат «SQL Island» ↗</a>
+                                <div class="issuer">Успешное прохождение интерактивной языковой игры на знание манипуляции данными через SQL.</div>
+                            </td>
+                            <td>Университет Кайзерслаутерна (Германия)</td>
+                            <td style="text-align: center;"><span class="year">2024</span></td>
+                        </tr>
+
+                        <!-- Английский СТЭТ -->
+                        <tr>
+                            <td>
+                                <a href="Чуб Владимир.jpg" target="_blank" class="doc-link">
+                                    <img src="Чуб Владимир.jpg" alt="Диплом по английскому" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%231e293b\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-size=\'10\' font-family=\'sans-serif\'>JPG</text></svg>';">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="Чуб Владимир.jpg" target="_blank" class="table-link">Диплом II Места: Всероссийская олимпиада по Английскому языку ↗</a>
+                                <div class="issuer">Призовое место среди студентов профессиональных образовательных учреждений (1 курс СТЭТ).</div>
+                            </td>
+                            <td>Мир-Олимпиада</td>
+                            <td style="text-align: center;"><span class="year">2022</span></td>
+                        </tr>
+
+                        <!-- Диктант Победы -->
+                        <tr>
+                            <td>
+                                <a href="Диплом участника «ДИКТАНТ ПОБЕДЫ – 2024».jpg" target="_blank" class="doc-link">
+                                    <img src="Диплом участника «ДИКТАНТ ПОБЕДЫ – 2024».jpg" alt="Диктант Победы" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%231e293b\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-size=\'10\' font-family=\'sans-serif\'>JPG</text></svg>';">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="Диплом участника «ДИКТАНТ ПОБЕДЫ – 2024».jpg" target="_blank" class="table-link">Диплом участника «Диктант Победы» ↗</a>
+                                <div class="issuer">Успешное участие в международном диктанте. Результат: 25 из 25 баллов за время 03:06.</div>
+                            </td>
+                            <td>Музей Победы / РИО</td>
+                            <td style="text-align: center;"><span class="year">2024</span></td>
+                        </tr>
+
+                        <!-- Этнодиктант -->
+                        <tr>
+                            <td>
+                                <a href="sert-chub-vladimir-konstantinovich-ru.pdf" target="_blank" class="doc-link">
+                                    <img src="sert-chub-vladimir-konstantinovich-ru.pdf" alt="Этнографический диктант" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%231e293b\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-size=\'10\' font-family=\'sans-serif\'>PDF</text></svg>';">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="sert-chub-vladimir-konstantinovich-ru.pdf" target="_blank" class="table-link">Сертификат: Большой этнографический диктант ↗</a>
+                                <div class="issuer">Тестирование на знание культуры и традиций. Результат: 95 из 100 баллов.</div>
+                            </td>
+                            <td>ФАДН России</td>
+                            <td style="text-align: center;"><span class="year">2022</span></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Подвал -->
+        <footer>
+            <p>Связаться со мной:</p>
+            <div class="contacts">
+                <a href="mailto:chubvladimir@yandex.ru">Email</a> • 
+                <a href="https://t.me/rimidalv" target="_blank">Telegram</a> • 
+                <a href="https://github.com/RimidalvReplacer" target="_blank">GitHub</a>
+            </div>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #475569;">&copy; 2026 Владимир Чуб. Все права защищены.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
