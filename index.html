@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Владимир Чуб | Портфолио</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-success: #34d399;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-top: -45px;
+            margin-bottom: 50px;
+            font-size: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 15px;
+            color: var(--text-main);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .full-width {
+                grid-column: span 2;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.1);
+            border-color: var(--accent-color);
+        }
+
+        .card-header {
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 20px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .tag-tech { background-color: rgba(56, 189, 248, 0.15); color: var(--accent-color); }
+        .tag-edu { background-color: rgba(52, 211, 153, 0.15); color: var(--accent-success); }
+        .tag-lang { background-color: rgba(167, 139, 250, 0.15); color: #a78bfa; }
+
+        .card h3 {
+            font-size: 1.3rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .issuer {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .details {
+            font-size: 0.95rem;
+            color: #cbd5e1;
+            margin-bottom: 15px;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: bold;
+        }
+
+        .btn-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .btn-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #334155;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .contacts a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .contacts a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Владимир Чуб</h1>
+            <p>Data & SQL Specialist | Portfolio</p>
+        </header>
+
+        <div class="subtitle">
+            <p>Специализируюсь на работе с базами данных, анализе данных и непрерывном обучении.</p>
+        </div>
+
+        <section>
+            <h2>Достижения и Сертификаты</h2>
+            <div class="grid">
+
+                <div class="card full-width">
+                    <div>
+                        <div class="tag tag-tech">БАЗЫ ДАННЫХ & SQL</div>
+                        <h3>Сертификат с отличием: Интерактивный тренажер по SQL</h3>
+                        <div class="issuer">Дальневосточный федеральный университет (ДВФУ) & Stepik</div>
+                        <p class="details">Успешно освоил продвинутые навыки проектирования и написания сложных запросов к базам данных на практике, завершив профильный интерактивный курс с отличием.</p>
+                    </div>
+                    <div>
+                        <span class="date">Апрель 2024</span>
+                        <br><a href="https://stepik.org/cert/2443687" target="_blank" class="btn-link">Проверить сертификат →</a>
+                    </div>
+                </div>
