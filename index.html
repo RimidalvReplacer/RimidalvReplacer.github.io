@@ -6,12 +6,12 @@
     <title>Владимир Чуб | Портфолио</title>
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-color: #38bdf8;
-            --border-color: #334155;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --accent-color: #4f46e5;
+            --border-color: #e2e8f0;
         }
 
         * {
@@ -41,7 +41,7 @@
             border-radius: 16px;
             padding: 40px;
             margin-bottom: 50px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
         }
 
         .profile-section h1 {
@@ -59,7 +59,7 @@
 
         .profile-section .bio {
             font-size: 1.05rem;
-            color: #cbd5e1;
+            color: #334155;
             max-width: 800px;
         }
 
@@ -79,7 +79,7 @@
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
         }
 
         table {
@@ -90,7 +90,7 @@
         }
 
         th {
-            background-color: #111827;
+            background-color: #f1f5f9;
             color: var(--text-muted);
             font-size: 0.85rem;
             text-transform: uppercase;
@@ -103,7 +103,7 @@
             padding: 20px;
             border-bottom: 1px solid var(--border-color);
             vertical-align: middle;
-            color: #cbd5e1;
+            color: #334155;
             font-size: 0.95rem;
         }
 
@@ -112,7 +112,7 @@
         }
 
         tr:hover td {
-            background-color: #243249;
+            background-color: #f8fafc;
         }
 
         /* Стили для миниатюр */
@@ -121,10 +121,10 @@
             height: 60px;
             object-fit: cover;
             border-radius: 6px;
-            border: 1px solid #475569;
-            background-color: #0f172a;
+            border: 1px solid var(--border-color);
+            background-color: #f1f5f9;
             display: block;
-            transition: transform 0.2s;
+            transition: transform 0.2s, border-color 0.2s;
         }
 
         .doc-link:hover .doc-preview {
@@ -137,6 +137,7 @@
             color: var(--text-main);
             text-decoration: none;
             font-weight: 600;
+            transition: color 0.2s;
         }
 
         .table-link:hover {
@@ -168,6 +169,7 @@
             color: var(--accent-color);
             text-decoration: none;
             margin: 0 10px;
+            font-weight: 500;
         }
 
         .contacts a:hover {
@@ -207,7 +209,7 @@
                         <tr>
                             <td>
                                 <a href="stepik-certificate-Chub-Vladimir.pdf" target="_blank" class="doc-link">
-                                    <img src="stepik-certificate-Chub-Vladimir.pdf" alt="Тренажер по SQL" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%231e293b\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-size=\'10\' font-family=\'sans-serif\'>PDF</text></svg>';">
+                                    <img src="stepik-certificate-Chub-Vladimir.pdf" alt="Тренажер по SQL" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%23f1f5f9\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2364748b\' font-size=\'12\' font-weight=\'bold\' font-family=\'sans-serif\'>PDF</text></svg>';">
                                 </a>
                             </td>
                             <td>
@@ -222,7 +224,7 @@
                         <tr>
                             <td>
                                 <a href="Certificate_SQL-Island.pdf" target="_blank" class="doc-link">
-                                    <img src="Certificate_SQL-Island.pdf" alt="SQL Island" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%231e293b\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-size=\'10\' font-family=\'sans-serif\'>PDF</text></svg>';">
+                                    <img src="Certificate_SQL-Island.pdf" alt="SQL Island" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%23f1f5f9\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2364748b\' font-size=\'12\' font-weight=\'bold\' font-family=\'sans-serif\'>PDF</text></svg>';">
                                 </a>
                             </td>
                             <td>
@@ -237,7 +239,7 @@
                         <tr>
                             <td>
                                 <a href="Чуб Владимир.jpg" target="_blank" class="doc-link">
-                                    <img src="Чуб Владимир.jpg" alt="Диплом по английскому" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%231e293b\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-size=\'10\' font-family=\'sans-serif\'>JPG</text></svg>';">
+                                    <img src="Чуб Владимир.jpg" alt="Диплом по английскому" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%23f1f5f9\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2364748b\' font-size=\'12\' font-weight=\'bold\' font-family=\'sans-serif\'>JPG</text></svg>';">
                                 </a>
                             </td>
                             <td>
@@ -252,7 +254,7 @@
                         <tr>
                             <td>
                                 <a href="Диплом участника «ДИКТАНТ ПОБЕДЫ – 2024».jpg" target="_blank" class="doc-link">
-                                    <img src="Диплом участника «ДИКТАНТ ПОБЕДЫ – 2024».jpg" alt="Диктант Победы" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%231e293b\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-size=\'10\' font-family=\'sans-serif\'>JPG</text></svg>';">
+                                    <img src="Диплом участника «ДИКТАНТ ПОБЕДЫ – 2024».jpg" alt="Диктант Победы" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%23f1f5f9\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2364748b\' font-size=\'12\' font-weight=\'bold\' font-family=\'sans-serif\'>JPG</text></svg>';">
                                 </a>
                             </td>
                             <td>
@@ -267,7 +269,7 @@
                         <tr>
                             <td>
                                 <a href="sert-chub-vladimir-konstantinovich-ru.pdf" target="_blank" class="doc-link">
-                                    <img src="sert-chub-vladimir-konstantinovich-ru.pdf" alt="Этнографический диктант" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%231e293b\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2394a3b8\' font-size=\'10\' font-family=\'sans-serif\'>PDF</text></svg>';">
+                                    <img src="sert-chub-vladimir-konstantinovich-ru.pdf" alt="Этнографический диктант" class="doc-preview" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'80\' height=\'60\' viewBox=\'0 0 80 60\'><rect width=\'80\' height=\'60\' fill=\'%23f1f5f9\'/><text x=\'50%\' y=\'55%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%2364748b\' font-size=\'12\' font-weight=\'bold\' font-family=\'sans-serif\'>PDF</text></svg>';">
                                 </a>
                             </td>
                             <td>
@@ -291,7 +293,7 @@
                 <a href="https://t.me/rimidalv" target="_blank">Telegram</a> • 
                 <a href="https://github.com/RimidalvReplacer" target="_blank">GitHub</a>
             </div>
-            <p style="margin-top: 15px; font-size: 0.8rem; color: #475569;">&copy; 2026 Владимир Чуб. Все права защищены.</p>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: #64748b;">&copy; 2026 Владимир Чуб. Все права защищены.</p>
         </footer>
     </div>
 
